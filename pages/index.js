@@ -61,12 +61,11 @@ const Home =  () => {
     const _channel = await client.getChannelBySid(generalChannel.sid);
     const myChannel = get(_channel, 'channelState.status', '') !== 'joined' ? await _channel.join() : _channel;
     const messages = await myChannel.getMessages();
-    console.log(messages);
     const totalMessages = get(messages, 'items.length', []);
-    for (let i = 0; i < totalMessages; i++) {
-      const message = messages.items[i];
-      setMessage(formatMessage(message));
-    }
+    // for (let i = 0; i < totalMessages; i++) {
+    //   const message = messages.items[i];
+    //   setMessage(formatMessage(message));
+    // }
     myChannel.on('messageAdded', addMessageToList);
     console.log('channel join', myChannel);
     setCurrentChannel(myChannel);
