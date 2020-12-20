@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "antd": "^4.9.4",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "isomorphic-unfetch": "^3.1.0",
     "lodash": "^4.17.20",
